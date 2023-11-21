@@ -245,7 +245,7 @@
                   <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   <Component id="faq" min="-2" pref="94" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                  <Component id="services" min="-2" max="-2" attributes="0"/>
+                  <Component id="contact" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -258,7 +258,7 @@
                       <Component id="jLabel7" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="faq" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="about" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="services" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="contact" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -294,7 +294,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aboutActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="services">
+        <Component class="javax.swing.JButton" name="contact">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="44" green="5c" red="7c" type="rgb"/>
@@ -308,7 +308,7 @@
             <Property name="text" type="java.lang.String" value="Contact"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="servicesActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="contactActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="faq">

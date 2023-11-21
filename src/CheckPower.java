@@ -47,7 +47,7 @@ public class CheckPower extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         about = new javax.swing.JButton();
-        services = new javax.swing.JButton();
+        contact = new javax.swing.JButton();
         faq = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -172,13 +172,13 @@ public class CheckPower extends javax.swing.JFrame {
             }
         });
 
-        services.setBackground(new java.awt.Color(124, 92, 68));
-        services.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        services.setForeground(new java.awt.Color(255, 255, 255));
-        services.setText("Contact");
-        services.addActionListener(new java.awt.event.ActionListener() {
+        contact.setBackground(new java.awt.Color(124, 92, 68));
+        contact.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        contact.setForeground(new java.awt.Color(255, 255, 255));
+        contact.setText("Contact");
+        contact.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                servicesActionPerformed(evt);
+                contactActionPerformed(evt);
             }
         });
 
@@ -204,7 +204,7 @@ public class CheckPower extends javax.swing.JFrame {
                 .addGap(60, 60, 60)
                 .addComponent(faq, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(92, 92, 92)
-                .addComponent(services)
+                .addComponent(contact)
                 .addGap(68, 68, 68))
         );
         jPanel2Layout.setVerticalGroup(
@@ -215,7 +215,7 @@ public class CheckPower extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(faq)
                     .addComponent(about)
-                    .addComponent(services))
+                    .addComponent(contact))
                 .addContainerGap())
         );
 
@@ -259,15 +259,15 @@ public class CheckPower extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_aboutActionPerformed
 
-    private void servicesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_servicesActionPerformed
-        About obj = new About();
+    private void contactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactActionPerformed
+        Contact obj = new Contact();
         obj.setVisible(true);
         dispose();
         // TODO add your handling code here:
-    }//GEN-LAST:event_servicesActionPerformed
+    }//GEN-LAST:event_contactActionPerformed
 
     private void faqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faqActionPerformed
-        About obj = new About();
+        Faq obj = new Faq();
         obj.setVisible(true);
         dispose();
         // TODO add your handling code here:
@@ -310,6 +310,7 @@ public class CheckPower extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton about;
+    private javax.swing.JButton contact;
     private javax.swing.JTextField email1;
     private javax.swing.JButton faq;
     private javax.swing.JButton jButton2;
@@ -322,7 +323,6 @@ public class CheckPower extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField name;
     private javax.swing.JTextField power;
-    private javax.swing.JButton services;
     private javax.swing.JTextField usage;
     // End of variables declaration//GEN-END:variables
 }
