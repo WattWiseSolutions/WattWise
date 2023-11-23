@@ -185,7 +185,7 @@ public class Signup extends javax.swing.JFrame {
         } else {
             if (p.equals(cp)) {
                 try {
-                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "riya");
+                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "Premveer7$");
                     Statement stmt = con.createStatement();
                     ResultSet rs = stmt.executeQuery("Select email,password from signup where email='" + e + "'");
 

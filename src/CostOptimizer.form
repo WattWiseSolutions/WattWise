@@ -314,19 +314,19 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="75" max="32767" attributes="0"/>
-                      <Component id="lbl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="lbl" min="-2" pref="37" max="-2" attributes="0"/>
+                      <EmptySpace pref="308" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Component id="lbl" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="68" max="32767" attributes="0"/>
+                      <EmptySpace pref="368" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -334,9 +334,7 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lbl">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/illustrations/Logo.png"/>
-                </Property>
+                <Property name="text" type="java.lang.String" value="jLabel1"/>
               </Properties>
             </Component>
           </SubComponents>

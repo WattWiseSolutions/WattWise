@@ -254,7 +254,7 @@ public class CheckPower extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Click on calculate cost button first");
         } else {
             try {
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "riya");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "Premveer7$");
                 Statement stmt = con.createStatement();
                 int i = stmt.executeUpdate("Insert into cost(email,units,total_cost) values('" + e + "','" + units1 + "','" + cost1 + "')");
                 if (i > 0) {
