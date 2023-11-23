@@ -47,8 +47,8 @@ public class CheckPower extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         about = new javax.swing.JButton();
         contact = new javax.swing.JButton();
-        faq = new javax.swing.JButton();
         contact1 = new javax.swing.JButton();
+        contact2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(806, 620));
@@ -185,16 +185,6 @@ public class CheckPower extends javax.swing.JFrame {
             }
         });
 
-        faq.setBackground(new java.awt.Color(124, 92, 68));
-        faq.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        faq.setForeground(new java.awt.Color(255, 255, 255));
-        faq.setText("FAQ");
-        faq.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                faqActionPerformed(evt);
-            }
-        });
-
         contact1.setBackground(new java.awt.Color(124, 92, 68));
         contact1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         contact1.setForeground(new java.awt.Color(255, 255, 255));
@@ -205,6 +195,16 @@ public class CheckPower extends javax.swing.JFrame {
             }
         });
 
+        contact2.setBackground(new java.awt.Color(124, 92, 68));
+        contact2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        contact2.setForeground(new java.awt.Color(255, 255, 255));
+        contact2.setText("Home");
+        contact2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                contact2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -212,13 +212,13 @@ public class CheckPower extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(93, 93, 93)
+                .addGap(134, 134, 134)
                 .addComponent(about, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(faq, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(72, 72, 72)
                 .addComponent(contact)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addComponent(contact2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(contact1))
         );
         jPanel2Layout.setVerticalGroup(
@@ -229,14 +229,15 @@ public class CheckPower extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(faq)
                             .addComponent(about)
                             .addComponent(contact)))
-                    .addComponent(contact1))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(contact1)
+                        .addComponent(contact2)))
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -246,7 +247,7 @@ public class CheckPower extends javax.swing.JFrame {
         String u = units.getText().toString();
 
         int units1 = Integer.parseInt(u);
-        double cost1 = units1 * 4.50;
+        double cost1 = units1 * 6.50;
         cost.setText("" + cost1);
         if (e.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Enter all the field correctly correctly");
@@ -269,6 +270,13 @@ public class CheckPower extends javax.swing.JFrame {
         }        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        AddAppliance obj = new AddAppliance();
+        obj.setVisible(true);
+        dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     private void aboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutActionPerformed
         About obj = new About();
         obj.setVisible(true);
@@ -282,25 +290,17 @@ public class CheckPower extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_contactActionPerformed
 
-    private void faqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faqActionPerformed
-        Faq obj = new Faq();
-        obj.setVisible(true);
-        dispose();
-        // TODO add your handling code here:
-    }//GEN-LAST:event_faqActionPerformed
-
     private void contact1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contact1ActionPerformed
         Login obj = new Login();
         obj.setVisible(true);
         dispose();
     }//GEN-LAST:event_contact1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        AddAppliance obj = new AddAppliance();
+    private void contact2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contact2ActionPerformed
+        CheckPower obj = new CheckPower();
         obj.setVisible(true);
-        dispose();
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_contact2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -341,9 +341,9 @@ public class CheckPower extends javax.swing.JFrame {
     private javax.swing.JButton about;
     private javax.swing.JButton contact;
     private javax.swing.JButton contact1;
+    private javax.swing.JButton contact2;
     private javax.swing.JTextField cost;
     private javax.swing.JTextField email1;
-    private javax.swing.JButton faq;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel4;

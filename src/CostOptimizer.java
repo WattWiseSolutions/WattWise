@@ -36,7 +36,6 @@ public class CostOptimizer extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         about = new javax.swing.JButton();
         contact = new javax.swing.JButton();
-        faq = new javax.swing.JButton();
         contact1 = new javax.swing.JButton();
         contact2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -80,16 +79,6 @@ public class CostOptimizer extends javax.swing.JFrame {
             }
         });
 
-        faq.setBackground(new java.awt.Color(124, 92, 68));
-        faq.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        faq.setForeground(new java.awt.Color(255, 255, 255));
-        faq.setText("FAQ");
-        faq.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                faqActionPerformed(evt);
-            }
-        });
-
         contact1.setBackground(new java.awt.Color(124, 92, 68));
         contact1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         contact1.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,13 +106,11 @@ public class CostOptimizer extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(93, 93, 93)
+                .addGap(124, 124, 124)
                 .addComponent(about, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(faq, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(contact)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(contact)
+                .addGap(73, 73, 73)
                 .addComponent(contact2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(contact1))
@@ -136,7 +123,6 @@ public class CostOptimizer extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(faq)
                             .addComponent(about)
                             .addComponent(contact)))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -264,13 +250,6 @@ public class CostOptimizer extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_contactActionPerformed
 
-    private void faqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faqActionPerformed
-        Faq obj = new Faq();
-        obj.setVisible(true);
-        dispose();
-        // TODO add your handling code here:
-    }//GEN-LAST:event_faqActionPerformed
-
     private void contact1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contact1ActionPerformed
         Login obj = new Login();
         obj.setVisible(true);
@@ -280,7 +259,7 @@ public class CostOptimizer extends javax.swing.JFrame {
     private void contact2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contact2ActionPerformed
         CheckPower obj = new CheckPower();
         obj.setVisible(true);
-        dispose();        // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_contact2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -366,7 +345,6 @@ public class CostOptimizer extends javax.swing.JFrame {
     private javax.swing.JButton contact;
     private javax.swing.JButton contact1;
     private javax.swing.JButton contact2;
-    private javax.swing.JButton faq;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel4;
