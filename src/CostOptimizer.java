@@ -268,7 +268,7 @@ public class CostOptimizer extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Enter the email");
         } else {
             try {
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "Premveer7$");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "riya");
                 Statement stmt = con.createStatement();
                 ResultSet rs = stmt.executeQuery("Select email,units from cost where email='" + e + "'");
                 if (rs.next()) {
@@ -303,11 +303,16 @@ public class CostOptimizer extends javax.swing.JFrame {
             try {
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "riya");
                 Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT name, MAX(consumption) AS max_consumption FROM powerconsumed WHERE email ='" + e + "'GROUP BY name ORDER BY max_consumption desc LIMIT 1 '");
+                String query = "SELECT name, MAX(consumption) AS max_consumption "
+                        + "FROM powerconsumed "
+                        + "WHERE email ='" + e + "' "
+                        + "GROUP BY name ORDER BY max_consumption DESC LIMIT 1";
+
+                ResultSet rs = stmt.executeQuery(query);
 
                 if (rs.next()) {
-                    //String Name = String.valueOf(rs.getString("name"));
-                    //lbl.setText("" + Name);
+                    String Name = String.valueOf(rs.getString("name"));
+                    lbl.setText("" + Name);
 
                     JOptionPane.showMessageDialog(this, "information stored");
                 } else {
