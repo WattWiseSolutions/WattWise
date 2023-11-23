@@ -1,10 +1,10 @@
 
+import javax.swing.JOptionPane;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -14,12 +14,12 @@ import javax.swing.JOptionPane;
  *
  * @author riyan
  */
-public class DeleteAppliance extends javax.swing.JFrame {
+public class CalculateCost extends javax.swing.JFrame {
 
     /**
-     * Creates new form DeleteAppliance
+     * Creates new form CalculateCost
      */
-    public DeleteAppliance() {
+    public CalculateCost() {
         initComponents();
     }
 
@@ -32,97 +32,25 @@ public class DeleteAppliance extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel5 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        email3 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        name2 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         about = new javax.swing.JButton();
         contact = new javax.swing.JButton();
+        faq = new javax.swing.JButton();
         contact1 = new javax.swing.JButton();
         contact2 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        email3 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        cost = new javax.swing.JTextField();
+        jButton6 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(806, 620));
-        setPreferredSize(new java.awt.Dimension(806, 620));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel5.setBackground(new java.awt.Color(251, 195, 132));
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Delete Appliance", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 48), new java.awt.Color(255, 255, 255))); // NOI18N
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Email");
-
-        email3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        email3.setToolTipText("Enter id");
-        email3.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        email3.setName("name"); // NOI18N
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Appliance Name");
-
-        name2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        name2.setToolTipText("Enter id");
-        name2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        name2.setName("name"); // NOI18N
-
-        jButton6.setBackground(new java.awt.Color(124, 92, 68));
-        jButton6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setText("Delete Appliance");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(email3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(name2)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(133, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(95, 95, 95))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(email3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel8)
-                .addGap(18, 18, 18)
-                .addComponent(name2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(153, 153, 153))
-        );
-
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 430, 390));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/illustrations/Logo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(251, 195, 132));
 
@@ -150,6 +78,16 @@ public class DeleteAppliance extends javax.swing.JFrame {
             }
         });
 
+        faq.setBackground(new java.awt.Color(124, 92, 68));
+        faq.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        faq.setForeground(new java.awt.Color(255, 255, 255));
+        faq.setText("FAQ");
+        faq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                faqActionPerformed(evt);
+            }
+        });
+
         contact1.setBackground(new java.awt.Color(124, 92, 68));
         contact1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         contact1.setForeground(new java.awt.Color(255, 255, 255));
@@ -163,7 +101,7 @@ public class DeleteAppliance extends javax.swing.JFrame {
         contact2.setBackground(new java.awt.Color(124, 92, 68));
         contact2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         contact2.setForeground(new java.awt.Color(255, 255, 255));
-        contact2.setText("Home");
+        contact2.setText("Back");
         contact2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contact2ActionPerformed(evt);
@@ -177,11 +115,13 @@ public class DeleteAppliance extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(134, 134, 134)
+                .addGap(93, 93, 93)
                 .addComponent(about, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
+                .addGap(35, 35, 35)
+                .addComponent(faq, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(contact)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(contact2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(contact1))
@@ -194,6 +134,7 @@ public class DeleteAppliance extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(faq)
                             .addComponent(about)
                             .addComponent(contact)))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -204,37 +145,84 @@ public class DeleteAppliance extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jPanel5.setBackground(new java.awt.Color(251, 195, 132));
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Calculate Bill", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 48), new java.awt.Color(255, 255, 255))); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Email");
+
+        email3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        email3.setToolTipText("Enter id");
+        email3.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        email3.setName("name"); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Total Bill per Month");
+
+        cost.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        cost.setToolTipText("Enter id");
+        cost.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cost.setName("name"); // NOI18N
+
+        jButton6.setBackground(new java.awt.Color(124, 92, 68));
+        jButton6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Calculate");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(email3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(cost)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap(122, Short.MAX_VALUE)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(106, 106, 106))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(email3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cost, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(138, 138, 138))
+        );
+
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(342, 126, -1, 390));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/illustrations/Logo.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 181, -1, -1));
+
         jLabel9.setBackground(new java.awt.Color(255, 255, 255));
         jLabel9.setOpaque(true);
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 580));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        String n = name2.getText().toString();
-        String e = email3.getText().toString();
-
-        if (n.isEmpty() || e.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Enter all the field correctly correctly");
-        } else {
-            try {
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "Premveer7$");
-                Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery("Select email from signup where email='" + e + "';");
-
-                int i = stmt.executeUpdate("DELETE FROM powerconsumed WHERE email ='" + e + "'and name='" + n + "'");
-                if (i > 0) {
-                    JOptionPane.showMessageDialog(this, "Appliance Deleted");
-                    name2.setText("");
-                    email3.setText("");
-                }
-            } catch (SQLException error) {
-                System.out.println(error.getMessage());
-            }
-        }
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void aboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutActionPerformed
         About obj = new About();
@@ -249,6 +237,13 @@ public class DeleteAppliance extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_contactActionPerformed
 
+    private void faqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_faqActionPerformed
+        Faq obj = new Faq();
+        obj.setVisible(true);
+        dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_faqActionPerformed
+
     private void contact1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contact1ActionPerformed
         Login obj = new Login();
         obj.setVisible(true);
@@ -260,6 +255,30 @@ public class DeleteAppliance extends javax.swing.JFrame {
         obj.setVisible(true);
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_contact2ActionPerformed
+
+    private void jButton6jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6jButton4ActionPerformed
+        String c = cost.getText().toString();
+        String e = email3.getText().toString();
+
+        if (e.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Enter all the field correctly correctly");
+        } else {
+            try {
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "Premveer7$");
+                Statement stmt = con.createStatement();
+                ResultSet rs = stmt.executeQuery("Select email from signup where email='" + e + "';");
+
+                int i = stmt.executeUpdate("Insert into cost(email,total_cost) values('" + e + "','" + c + "')");
+                if (i > 0) {
+                    cost.setText("");
+
+                }
+            } catch (SQLException error) {
+                System.out.println(error.getMessage());
+            }
+        }
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -278,20 +297,20 @@ public class DeleteAppliance extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DeleteAppliance.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalculateCost.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DeleteAppliance.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalculateCost.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DeleteAppliance.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalculateCost.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DeleteAppliance.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalculateCost.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DeleteAppliance().setVisible(true);
+                new CalculateCost().setVisible(true);
             }
         });
     }
@@ -301,7 +320,9 @@ public class DeleteAppliance extends javax.swing.JFrame {
     private javax.swing.JButton contact;
     private javax.swing.JButton contact1;
     private javax.swing.JButton contact2;
+    private javax.swing.JTextField cost;
     private javax.swing.JTextField email3;
+    private javax.swing.JButton faq;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
@@ -310,6 +331,5 @@ public class DeleteAppliance extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField name2;
     // End of variables declaration//GEN-END:variables
 }

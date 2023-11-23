@@ -175,23 +175,23 @@ public class CostOptimizer extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        lbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/illustrations/Logo.png"))); // NOI18N
+        lbl.setText("jLabel1");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(75, Short.MAX_VALUE)
-                .addComponent(lbl)
-                .addGap(55, 55, 55))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(308, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addGap(26, 26, 26)
                 .addComponent(lbl)
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(368, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 380, 410));
@@ -268,7 +268,7 @@ public class CostOptimizer extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Enter the email");
         } else {
             try {
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "riya");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "Premveer7$");
                 Statement stmt = con.createStatement();
                 ResultSet rs = stmt.executeQuery("Select email,units from cost where email='" + e + "'");
                 if (rs.next()) {
@@ -293,7 +293,38 @@ public class CostOptimizer extends javax.swing.JFrame {
     }//GEN-LAST:event_userActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        lbl.setVisible(false);
+        
+        
+        String e = user.getText().toString();
+        String p = units1.getText().toString();
+        String u = units.getText().toString();
+
+        if ( e.isEmpty() || p.isEmpty() || u.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Enter all the field correctly correctly");
+        } else {
+            try {
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "Premveer7$");
+                Statement stmt = con.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT name, MAX(consumption) AS max_consumption FROM powerconsumed WHERE email ='"+ e + "'GROUP BY name ORDER BY max_consumption desc LIMIT 1 '");
+
+                if (rs.next()) {
+                    String Name = String.valueOf(rs.getString("name"));
+                    lbl.setText(""+ Name);
+                    
+                        JOptionPane.showMessageDialog(this, "information stored");
+                        
+                        
+
+                    
+                } else {
+                    JOptionPane.showMessageDialog(this, "Email not found in signup db");
+
+                }
+            } catch (SQLException error) {
+                System.out.println(error.getMessage());
+            }
+        }
+    }                                        
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
