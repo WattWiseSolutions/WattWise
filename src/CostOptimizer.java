@@ -293,39 +293,30 @@ public class CostOptimizer extends javax.swing.JFrame {
     }//GEN-LAST:event_userActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        
-        
         String e = user.getText().toString();
         String p = units1.getText().toString();
         String u = units.getText().toString();
 
-        if ( e.isEmpty() || p.isEmpty() || u.isEmpty()) {
+        if (e.isEmpty() || p.isEmpty() || u.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Enter all the field correctly correctly");
         } else {
             try {
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "Premveer7$");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "riya");
                 Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT name, MAX(consumption) AS max_consumption FROM powerconsumed WHERE email ='"+ e + "'GROUP BY name ORDER BY max_consumption desc LIMIT 1 '");
+                ResultSet rs = stmt.executeQuery("SELECT name, MAX(consumption) AS max_consumption FROM powerconsumed WHERE email ='" + e + "'GROUP BY name ORDER BY max_consumption desc LIMIT 1 '");
 
                 if (rs.next()) {
-                    String Name = String.valueOf(rs.getString("name"));
-                    lbl.setText(""+ Name);
-                    
-                        JOptionPane.showMessageDialog(this, "information stored");
-                        
-                        
+                    //String Name = String.valueOf(rs.getString("name"));
+                    //lbl.setText("" + Name);
 
-                    
+                    JOptionPane.showMessageDialog(this, "information stored");
                 } else {
                     JOptionPane.showMessageDialog(this, "Email not found in signup db");
-
                 }
             } catch (SQLException error) {
                 System.out.println(error.getMessage());
             }
         }
-    }                                        
-
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**

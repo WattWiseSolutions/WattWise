@@ -219,7 +219,7 @@ public class DeleteAppliance extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Enter all the field correctly correctly");
         } else {
             try {
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "Premveer7$");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "riya");
                 Statement stmt = con.createStatement();
                 ResultSet rs = stmt.executeQuery("Select email from signup where email='" + e + "';");
 
