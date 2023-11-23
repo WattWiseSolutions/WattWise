@@ -46,6 +46,7 @@ public class DeleteAppliance extends javax.swing.JFrame {
         name2 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(806, 620));
@@ -212,10 +213,14 @@ public class DeleteAppliance extends javax.swing.JFrame {
                 .addGap(153, 153, 153))
         );
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 430, 390));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 430, 390));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/illustrations/Logo.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+
+        jLabel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setOpaque(true);
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -324,6 +329,7 @@ public class DeleteAppliance extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTextField name2;
