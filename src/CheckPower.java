@@ -22,7 +22,7 @@ public class CheckPower extends javax.swing.JFrame {
      */
     public CheckPower() {
         initComponents();
-        //email1.setText(name.getText());
+        cost.setEditable(false);
     }
 
     /**
@@ -35,16 +35,13 @@ public class CheckPower extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        name = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        power = new javax.swing.JTextField();
-        usage = new javax.swing.JTextField();
         email1 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        units = new javax.swing.JTextField();
+        cost = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -52,7 +49,6 @@ public class CheckPower extends javax.swing.JFrame {
         contact = new javax.swing.JButton();
         faq = new javax.swing.JButton();
         contact1 = new javax.swing.JButton();
-        contact2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(806, 620));
@@ -62,46 +58,9 @@ public class CheckPower extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(251, 195, 132));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Check Power Consumption", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Times New Roman", 0, 48), new java.awt.Color(255, 255, 255))); // NOI18N
 
-        name.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        name.setToolTipText("Enter id");
-        name.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        name.setName("name"); // NOI18N
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Power Consumed");
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Appliance Name");
-
-        jButton2.setBackground(new java.awt.Color(124, 92, 68));
-        jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("ADD");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Usage (in hours)");
-
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Email");
-
-        power.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        power.setToolTipText("Enter id");
-        power.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        power.setName("name"); // NOI18N
-
-        usage.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        usage.setToolTipText("Enter id");
-        usage.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        usage.setName("name"); // NOI18N
 
         email1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         email1.setToolTipText("Enter id");
@@ -118,10 +77,28 @@ public class CheckPower extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Units (Check the reading on you meter)");
+
+        units.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        units.setToolTipText("Enter id");
+        units.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        units.setName("name"); // NOI18N
+
+        cost.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        cost.setToolTipText("Enter id");
+        cost.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        cost.setName("name"); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Total Cost");
+
         jButton4.setBackground(new java.awt.Color(124, 92, 68));
         jButton4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Delete Appliance");
+        jButton4.setText("Cost Optimizer");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -132,32 +109,32 @@ public class CheckPower extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(191, 191, 191))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(190, 190, 190))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(name, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(407, 429, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 620, Short.MAX_VALUE))
-                    .addComponent(usage)
-                    .addComponent(power)
+                            .addComponent(email1)
+                            .addComponent(units)
+                            .addComponent(cost)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(email1)))
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(76, 76, 76)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,27 +143,22 @@ public class CheckPower extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(email1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(name, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(power, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel5)
-                .addGap(7, 7, 7)
-                .addComponent(usage, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(units, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cost, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 56, 800, 530));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 56, 590, 530));
 
         jPanel2.setBackground(new java.awt.Color(251, 195, 132));
 
@@ -234,16 +206,6 @@ public class CheckPower extends javax.swing.JFrame {
             }
         });
 
-        contact2.setBackground(new java.awt.Color(124, 92, 68));
-        contact2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        contact2.setForeground(new java.awt.Color(255, 255, 255));
-        contact2.setText("Back");
-        contact2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contact2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -257,9 +219,7 @@ public class CheckPower extends javax.swing.JFrame {
                 .addComponent(faq, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(contact)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(contact2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
                 .addComponent(contact1))
         );
         jPanel2Layout.setVerticalGroup(
@@ -273,64 +233,42 @@ public class CheckPower extends javax.swing.JFrame {
                             .addComponent(faq)
                             .addComponent(about)
                             .addComponent(contact)))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(contact1)
-                        .addComponent(contact2)))
+                    .addComponent(contact1))
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, -1));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String n = name.getText().toString();
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         String e = email1.getText().toString();
-        String p = power.getText().toString();
-        String u = usage.getText().toString();
+        String u = units.getText().toString();
 
-        if (n.isEmpty() || e.isEmpty() || p.isEmpty() || u.isEmpty()) {
+        int units1 = Integer.parseInt(u);
+        double cost1 = units1 * 4.50;
+        cost.setText("" + cost1);
+        if (e.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Enter all the field correctly correctly");
+        } else if (u.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Click on calculate cost button first");
         } else {
             try {
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/WattWise", "root", "riya");
                 Statement stmt = con.createStatement();
-                ResultSet rs = stmt.executeQuery("Select email from signup where email='" + e + "';");
-
-                if (rs.next()) {
-                    int i = stmt.executeUpdate("Insert into powerconsumed(email,name,power,consumption) values('" + e + "','" + n + "','" + p + "','" + u + "')");
-                    if (i > 0) {
-                        JOptionPane.showMessageDialog(this, "Appliance Added");
-                        name.setText("");
-                        email1.setText("");
-                        power.setText("");
-                        usage.setText("");
-
-                    }
-                } else {
-                    JOptionPane.showMessageDialog(this, "Email not found in signup db");
+                int i = stmt.executeUpdate("Insert into cost(email,units,total_cost) values('" + e + "','" + units1 + "','" + cost1 + "')");
+                if (i > 0) {
+                    JOptionPane.showMessageDialog(this, "Total Cost calculated");
+                    units.setText("");
+                    email1.setText("");
 
                 }
             } catch (SQLException error) {
                 System.out.println(error.getMessage());
             }
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        CalculateCost obj = new CalculateCost();
-        obj.setVisible(true);
-        dispose();
-        // TODO add your handling code here:
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        DeleteAppliance obj = new DeleteAppliance();
-        obj.setVisible(true);
-        dispose();
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
 
     private void aboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutActionPerformed
         About obj = new About();
@@ -358,11 +296,12 @@ public class CheckPower extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_contact1ActionPerformed
 
-    private void contact2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contact2ActionPerformed
-        CheckPower obj = new CheckPower();
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        AddAppliance obj = new AddAppliance();
         obj.setVisible(true);
-        dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_contact2ActionPerformed
+        dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -403,21 +342,17 @@ public class CheckPower extends javax.swing.JFrame {
     private javax.swing.JButton about;
     private javax.swing.JButton contact;
     private javax.swing.JButton contact1;
-    private javax.swing.JButton contact2;
+    private javax.swing.JTextField cost;
     private javax.swing.JTextField email1;
     private javax.swing.JButton faq;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField name;
-    private javax.swing.JTextField power;
-    private javax.swing.JTextField usage;
+    private javax.swing.JTextField units;
     // End of variables declaration//GEN-END:variables
 }
