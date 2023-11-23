@@ -277,7 +277,7 @@ public class DeleteAppliance extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void contact2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contact2ActionPerformed
-        CheckPower obj = new CheckPower();
+        AddAppliance obj = new AddAppliance();
         obj.setVisible(true);
         dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_contact2ActionPerformed
