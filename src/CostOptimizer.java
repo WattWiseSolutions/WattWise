@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -21,6 +22,7 @@ public class CostOptimizer extends javax.swing.JFrame {
      */
     public CostOptimizer() {
         initComponents();
+
     }
 
     /**
@@ -43,12 +45,15 @@ public class CostOptimizer extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         user = new javax.swing.JTextField();
-        units1 = new javax.swing.JTextField();
+        bill = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        lbl = new javax.swing.JLabel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        lbl = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
-        units = new javax.swing.JTextField();
+        desired = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        units2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(806, 620));
@@ -153,8 +158,8 @@ public class CostOptimizer extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Units (Check the reading on you meter)");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 335, -1));
+        jLabel5.setText("Total Bill");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, 100, -1));
 
         user.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         user.setToolTipText("Enter id");
@@ -167,31 +172,43 @@ public class CostOptimizer extends javax.swing.JFrame {
         });
         jPanel1.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 98, 380, 43));
 
-        units1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        units1.setToolTipText("Enter id");
-        units1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        units1.setName("name"); // NOI18N
-        jPanel1.add(units1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 380, 43));
+        bill.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        bill.setToolTipText("Enter id");
+        bill.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        bill.setName("name"); // NOI18N
+        jPanel1.add(bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 140, 43));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        lbl.setText("jLabel1");
+        lbl.setColumns(20);
+        lbl.setFont(new java.awt.Font("Rockwell Extra Bold", 0, 24)); // NOI18N
+        lbl.setLineWrap(true);
+        lbl.setRows(5);
+        lbl.setTabSize(5);
+        lbl.setText("Information Of Optimizer");
+        lbl.setWrapStyleWord(true);
+        lbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblMouseClicked(evt);
+            }
+        });
+        jScrollPane6.setViewportView(lbl);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(lbl, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(308, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(lbl)
-                .addContainerGap(368, Short.MAX_VALUE))
+                .addGap(14, 14, 14)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 380, 410));
@@ -199,14 +216,14 @@ public class CostOptimizer extends javax.swing.JFrame {
         jLabel8.setBackground(new java.awt.Color(255, 204, 204));
         jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Desired Cost");
+        jLabel8.setText("Desired Bill");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 335, -1));
 
-        units.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        units.setToolTipText("Enter id");
-        units.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        units.setName("name"); // NOI18N
-        jPanel1.add(units, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 380, 43));
+        desired.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        desired.setToolTipText("Enter id");
+        desired.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        desired.setName("name"); // NOI18N
+        jPanel1.add(desired, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 380, 43));
 
         jButton5.setBackground(new java.awt.Color(124, 92, 68));
         jButton5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
@@ -218,6 +235,17 @@ public class CostOptimizer extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 192, 49));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Units");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 60, -1));
+
+        units2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        units2.setToolTipText("Enter id");
+        units2.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        units2.setName("name"); // NOI18N
+        jPanel1.add(units2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 140, 43));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -276,7 +304,10 @@ public class CostOptimizer extends javax.swing.JFrame {
 
                     // Convert the String to an integer
                     int u = Integer.parseInt(uString);
-                    units1.setText("" + u);
+                    units2.setText("" + u);
+
+                    Double totalcost = u * 6.50;
+                    bill.setText("" + totalcost);
 
                 } else {
                     JOptionPane.showMessageDialog(this, "Such id entry doesn't exists.");
@@ -294,10 +325,10 @@ public class CostOptimizer extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         String e = user.getText().toString();
-        String p = units1.getText().toString();
-        String u = units.getText().toString();
+        String p = units2.getText().toString();
+        String d = desired.getText().toString();
 
-        if (e.isEmpty() || p.isEmpty() || u.isEmpty()) {
+        if (e.isEmpty() || p.isEmpty() || d.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Enter all the field correctly correctly");
         } else {
             try {
@@ -312,9 +343,14 @@ public class CostOptimizer extends javax.swing.JFrame {
 
                 if (rs.next()) {
                     String Name = String.valueOf(rs.getString("name"));
-                    lbl.setText("" + Name);
+                    Double des = Double.parseDouble(d);
+                    Double un = Double.parseDouble(p);
+                    Double cost = un * 6.50;
+                    Double unitsToBeSaved = (cost - des) / 6.50;
 
-                    JOptionPane.showMessageDialog(this, "information stored");
+                    lbl.setText("The " + Name + " appliance you have added consumes the most electricity. To optimize costs, consider reducing its usage by " + unitsToBeSaved + " units.");
+
+                    JOptionPane.showMessageDialog(this, "Information Stored");
                 } else {
                     JOptionPane.showMessageDialog(this, "Email not found in signup db");
                 }
@@ -323,6 +359,10 @@ public class CostOptimizer extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void lblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblMouseClicked
 
     /**
      * @param args the command line arguments
@@ -369,21 +409,32 @@ public class CostOptimizer extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton about;
+    private javax.swing.JTextField bill;
     private javax.swing.JButton contact;
     private javax.swing.JButton contact1;
     private javax.swing.JButton contact2;
+    private javax.swing.JTextField desired;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel lbl;
-    private javax.swing.JTextField units;
-    private javax.swing.JTextField units1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTextArea lbl;
+    private javax.swing.JTextArea profiletarea;
+    private javax.swing.JTextArea profiletarea1;
+    private javax.swing.JTextArea profiletarea2;
+    private javax.swing.JTextArea profiletarea3;
+    private javax.swing.JTextField units2;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }
