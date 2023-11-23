@@ -317,27 +317,15 @@ public class DeleteAppliance extends javax.swing.JFrame {
     private javax.swing.JButton contact;
     private javax.swing.JButton contact1;
     private javax.swing.JButton contact2;
-    private javax.swing.JTextField email1;
-    private javax.swing.JTextField email2;
     private javax.swing.JTextField email3;
     private javax.swing.JButton faq;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField name;
-    private javax.swing.JTextField name1;
     private javax.swing.JTextField name2;
     // End of variables declaration//GEN-END:variables
 }
