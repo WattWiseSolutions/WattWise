@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="# WattWise"></a>
-  WattWise 💙
+  WattWise 💡
 </h1>
 
 ## `Project Title`
