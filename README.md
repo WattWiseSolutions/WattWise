@@ -21,7 +21,10 @@ To run the WattWise, you need to have the following software installed on your m
 - MySQL
 
 ## `Installation`
-- Clone the repository: https://github.com/WattWiseSolutions/WattWise.git
+- Clone the repository:
+```bash
+git clone https://github.com/WattWiseSolutions/WattWise.git
+   ```
 - Open the project folder in preferred IDE.
 - Set up the database: <br>
     1. Create a new MySQL database for the reservation system.
